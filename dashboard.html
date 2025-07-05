@@ -28,122 +28,180 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- dashboard -->
-    <div class="dashboard">
-      <div class="dashboard-header">
-        <h1>Dashboard</h1>
-        <p>Welcome back! Here's what's happening with CPSearch today.</p>
+    <div class="main-layout">
+      <div class="sidebar-toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="filterby-date-box">
-        <h4>Filter by date:</h4>
-        <input type="date" name="" placeholder="Pick a Date" />
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-logo-box">
+          <img src="imgs/logo.png" alt="" />
+        </div>
+        <div class="menu-items-box">
+          <h3>Main Menu</h3>
+          <ul>
+            <li class="active">
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/dashboardicon.png" alt="" />
+                  <span>Dashboard</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/usermanagment.png" alt="" />
+                  <span>User Management</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/finacelogo.png" alt="" />
+                  <span>Finance</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-logout-box">
+          <img src="imgs/logouticon.png" alt="" />
+          <a href="#">Logout</a>
+        </div>
       </div>
-      <div class="container-fluid">
-        <div class="row gy-4">
-          <div class="col-6 col-md-4 col-lg-4">
-            <div class="dashboard-card">
-              <div class="dashboard-card-header">
-                <h5>Total Users</h5>
-                <div class="dashboard-card-icon-box">
-                  <img src="imgs/dashboardcardicon1.png" alt="" />
-                </div>
-              </div>
-              <div class="dashboard-card-body">
-                <h2>5,000</h2>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
+      <!-- dashboard -->
+      <div class="dashboard-main">
+        <div class="dashboard">
+          <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <p>Welcome back! Here's what's happening with CPSearch today.</p>
           </div>
-          <div class="col-6 col-md-4 col-lg-4">
-            <div class="dashboard-card">
-              <div class="dashboard-card-header">
-                <h5>Premium Users</h5>
-                <div class="dashboard-card-icon-box dashboard-card-icon-box-2">
-                  <img src="imgs/basil_card-outline.png" alt="" />
-                </div>
-              </div>
-              <div class="dashboard-card-body">
-                <h2>1,200</h2>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
+          <div class="filterby-date-box">
+            <h4>Filter by date:</h4>
+            <input type="date" name="" placeholder="Pick a Date" />
           </div>
-          <div class="col-6 col-md-4 col-lg-4">
-            <div class="dashboard-card">
-              <div class="dashboard-card-header">
-                <h5>Free Users</h5>
-                <div class="dashboard-card-icon-box dashboard-card-icon-box-3">
-                  <img src="imgs/freeuser.png" alt="" />
+          <div class="container-fluid">
+            <div class="row gy-4">
+              <div class="col-6 col-md-4 col-lg-4">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h5>Total Users</h5>
+                    <div class="dashboard-card-icon-box">
+                      <img src="imgs/dashboardcardicon1.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="dashboard-card-body">
+                    <h2>5,000</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
                 </div>
               </div>
-              <div class="dashboard-card-body">
-                <h2>3,600</h2>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-4">
-            <div class="dashboard-card">
-              <div class="dashboard-card-header">
-                <h5>Monthly Income</h5>
-                <div class="dashboard-card-icon-box dashboard-card-icon-box-4">
-                  <img src="imgs/imcom icon.png" alt="" />
+              <div class="col-6 col-md-4 col-lg-4">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h5>Premium Users</h5>
+                    <div
+                      class="dashboard-card-icon-box dashboard-card-icon-box-2"
+                    >
+                      <img src="imgs/basil_card-outline.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="dashboard-card-body">
+                    <h2>1,200</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
                 </div>
               </div>
-              <div class="dashboard-card-body">
-                <h2>$4,600</h2>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-4">
-            <div class="dashboard-card">
-              <div class="dashboard-card-header">
-                <h5>Total Income</h5>
-                <div class="dashboard-card-icon-box dashboard-card-icon-box-5">
-                  <img src="imgs/Vector (22).png" alt="" />
+              <div class="col-6 col-md-4 col-lg-4">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h5>Free Users</h5>
+                    <div
+                      class="dashboard-card-icon-box dashboard-card-icon-box-3"
+                    >
+                      <img src="imgs/freeuser.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="dashboard-card-body">
+                    <h2>3,600</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
                 </div>
               </div>
-              <div class="dashboard-card-body">
-                <h2>$55,600</h2>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-4">
-            <div class="dashboard-card">
-              <div class="dashboard-card-header">
-                <h5>Total Post</h5>
-                <div class="dashboard-card-icon-box dashboard-card-icon-box-6">
-                  <img src="imgs/post.png" alt="" />
+              <div class="col-6 col-md-4 col-lg-4">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h5>Monthly Income</h5>
+                    <div
+                      class="dashboard-card-icon-box dashboard-card-icon-box-4"
+                    >
+                      <img src="imgs/imcom icon.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="dashboard-card-body">
+                    <h2>$4,600</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
                 </div>
               </div>
-              <div class="dashboard-card-body">
-                <h2>25,600</h2>
-                <i class="fa-solid fa-arrow-right"></i>
+              <div class="col-6 col-md-4 col-lg-4">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h5>Total Income</h5>
+                    <div
+                      class="dashboard-card-icon-box dashboard-card-icon-box-5"
+                    >
+                      <img src="imgs/Vector (22).png" alt="" />
+                    </div>
+                  </div>
+                  <div class="dashboard-card-body">
+                    <h2>$55,600</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-4">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h5>Total Post</h5>
+                    <div
+                      class="dashboard-card-icon-box dashboard-card-icon-box-6"
+                    >
+                      <img src="imgs/post.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="dashboard-card-body">
+                    <h2>25,600</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!--dashboard  -->
-    <!-- dashboard chart -->
+        <!-- dashboard chart -->
 
-    <div class="chart-section">
-      <div class="chart-header">
-        <div class="chart-title-section">
-          <h2>Daily Distribution</h2>
-          <p>Daily trend for the selected metric over the past week</p>
+        <div class="chart-section">
+          <div class="chart-header">
+            <div class="chart-title-section">
+              <h2>Daily Distribution</h2>
+              <p>Daily trend for the selected metric over the past week</p>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="dailyChart" style="height: 400px"></canvas>
+          </div>
+          <div class="chart-summary">
+            <p id="chartSummary">
+              Showing daily distribution for total income over the past 7 days
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="chart-container">
-        <canvas id="dailyChart" style="height: 400px"></canvas>
-      </div>
-      <div class="chart-summary">
-        <p id="chartSummary">
-          Showing daily distribution for total income over the past 7 days
-        </p>
       </div>
     </div>
     <!-- Bootstrap JS Bundle CDN (optional, for JS components) -->
@@ -156,7 +214,12 @@
       src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"
       crossorigin="anonymous"
     ></script>
-
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -7,10 +7,21 @@
   --font-popin: "Poppins", sans-serif;
   --primary-color: rgba(255, 0, 0, 1);
 }
+.main-layout {
+  width: 100% !important;
+  display: flex;
+}
+.dashboard-main {
+  width: 100%;
+  padding-left: 250px;
+  padding-top: 60px;
+}
 /* sidebar */
 .sidebar {
   width: 260px;
   height: 100vh;
+  position: fixed;
+  background-color: white;
   /* background-color: #979ca1; */
   /* color: white; */
   padding: 20px 10px 0px 10px;
@@ -157,11 +168,15 @@
     display: block;
   }
 }
-
+@media (max-width: 900px) {
+  .dashboard-main {
+    padding-left: 0;
+  }
+}
 /* sidebar ends */
 /* dashboard */
 .dashboard {
-  width: calc(100% - 240px);
+  width: 100%;
   padding: 20px 30px;
 }
 .dashboard-header {
@@ -432,7 +447,7 @@
 /* usermanagment */
 .usermanagment {
   padding: 20px 30px;
-  width: calc(100% - 240px);
+  width: 100%;
 }
 .usermanagment-card {
   border-radius: 10px;
@@ -525,7 +540,7 @@
   color: #888;
 }
 /* user managment table */
-.table-container {
+.user-table-container {
   background: white;
   margin-top: 20px;
   border-radius: 12px;
@@ -703,7 +718,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .table-container {
+  .user-table-container {
     border-radius: 0;
     margin: -20px;
   }
@@ -763,14 +778,14 @@
   /* Hide less important columns on mobile */
   .user-table th:nth-child(6),
   .user-table td:nth-child(6) {
-    display: none;
+    display: none !important ;
   }
 }
 
 @media (max-width: 480px) {
   .user-table th:nth-child(5),
   .user-table td:nth-child(5) {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 900px) {
@@ -884,94 +899,4 @@ tr:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  /* body {
-    padding: 10px;
-  } */
-
-  .table-container {
-    border-radius: 8px;
-    text-align: start !important;
-  }
-
-  th,
-  td {
-    padding: 12px 16px;
-    font-size: 13px;
-  }
-
-  th {
-    font-size: 12px;
-  }
-
-  .amount {
-    font-size: 14px;
-  }
-
-  .status {
-    font-size: 11px;
-    padding: 3px 10px;
-  }
-}
-
-@media (max-width: 640px) {
-  th,
-  td {
-    padding: 10px 12px;
-  }
-
-  .table-wrapper {
-    border-radius: 8px;
-  }
-
-  /* Stack table on very small screens */
-  .responsive-stack {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  tr {
-    border: 1px solid #e5e7eb;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    background: white;
-    padding: 12px;
-  }
-
-  td {
-    border: none;
-    padding: 8px 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  td:before {
-    content: attr(data-label);
-    font-weight: 600;
-    color: #374151;
-    flex-shrink: 0;
-    margin-right: 12px;
-  }
-
-  .status {
-    margin-left: auto;
-  }
-}
+/*  */

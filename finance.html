@@ -29,145 +29,192 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- usermanagment cards -->
-    <div class="usermanagment">
-      <div class="dashboard-header">
-        <h1>Financial Overview</h1>
-        <p>Track payments, income, and financial activities</p>
+    <div class="main-layout">
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-logo-box">
+          <img src="imgs/logo.png" alt="" />
+        </div>
+        <div class="menu-items-box">
+          <h3>Main Menu</h3>
+          <ul>
+            <li class="active">
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/dashboardicon.png" alt="" />
+                  <span>Dashboard</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/usermanagment.png" alt="" />
+                  <span>User Management</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/finacelogo.png" alt="" />
+                  <span>Finance</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-logout-box">
+          <img src="imgs/logouticon.png" alt="" />
+          <a href="#">Logout</a>
+        </div>
       </div>
-      <div class="filterby-date-box">
-        <h4>Filter by date:</h4>
-        <input type="date" name="" placeholder="Pick a Date" />
-      </div>
-      <!-- userlist -->
-      <div class="userlist-container">
-        <h3>Recent Transactions</h3>
-        <p>Latest payment transactions and their status</p>
-        <!-- finacne-cards -->
-        <div class="fiance-cards-container">
-          <div class="row gy-3">
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="dashboard-card">
-                <div class="dashboard-card-header">
-                  <h5>Monthly Income</h5>
-                  <div
-                    class="dashboard-card-icon-box dashboard-card-icon-box-4"
-                  >
-                    <img src="imgs/imcom icon.png" alt="" />
+      <!-- usermanagment cards -->
+      <div class="dashboard-main">
+        <div class="usermanagment">
+          <div class="dashboard-header">
+            <h1>Financial Overview</h1>
+            <p>Track payments, income, and financial activities</p>
+          </div>
+          <div class="filterby-date-box">
+            <h4>Filter by date:</h4>
+            <input type="date" name="" placeholder="Pick a Date" />
+          </div>
+          <!-- userlist -->
+          <div class="userlist-container">
+            <h3>Recent Transactions</h3>
+            <p>Latest payment transactions and their status</p>
+            <!-- finacne-cards -->
+            <div class="fiance-cards-container">
+              <div class="row gy-3">
+                <div class="col-12 col-md-4 col-lg-4">
+                  <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                      <h5>Monthly Income</h5>
+                      <div
+                        class="dashboard-card-icon-box dashboard-card-icon-box-4"
+                      >
+                        <img src="imgs/imcom icon.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="dashboard-card-body">
+                      <h2>$4,600</h2>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
                   </div>
                 </div>
-                <div class="dashboard-card-body">
-                  <h2>$4,600</h2>
-                  <i class="fa-solid fa-arrow-right"></i>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                      <h5>Total Income</h5>
+                      <div
+                        class="dashboard-card-icon-box dashboard-card-icon-box-5"
+                      >
+                        <img src="imgs/Vector (22).png" alt="" />
+                      </div>
+                    </div>
+                    <div class="dashboard-card-body">
+                      <h2>$55,600</h2>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                      <h5>Premium Users</h5>
+                      <div
+                        class="dashboard-card-icon-box dashboard-card-icon-box-2"
+                      >
+                        <img src="imgs/basil_card-outline.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="dashboard-card-body">
+                      <h2>1,200</h2>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="dashboard-card">
-                <div class="dashboard-card-header">
-                  <h5>Total Income</h5>
-                  <div
-                    class="dashboard-card-icon-box dashboard-card-icon-box-5"
-                  >
-                    <img src="imgs/Vector (22).png" alt="" />
-                  </div>
-                </div>
-                <div class="dashboard-card-body">
-                  <h2>$55,600</h2>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
+            <!-- finance tabel -->
+            <div class="table-container">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Transaction ID</th>
+                      <th>User</th>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Transaction ID:" class="transaction-id">
+                        TX12345
+                      </td>
+                      <td data-label="User:" class="user-name">JohnDoe123</td>
+                      <td data-label="Type:" class="type">
+                        Premium<br />Subscription
+                      </td>
+                      <td data-label="Amount:" class="amount">$100</td>
+                      <td data-label="Date:" class="date">2024-<br />01-15</td>
+                      <td data-label="Status:" class="status">Successful</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Transaction ID:" class="transaction-id">
+                        TX12346
+                      </td>
+                      <td data-label="User:" class="user-name">
+                        JaneSmith_001
+                      </td>
+                      <td data-label="Type:" class="type">
+                        Premium<br />Subscription
+                      </td>
+                      <td data-label="Amount:" class="amount">$150</td>
+                      <td data-label="Date:" class="date">2024-<br />02-20</td>
+                      <td data-label="Status:" class="status">Successful</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Transaction ID:" class="transaction-id">
+                        TX12347
+                      </td>
+                      <td data-label="User:" class="user-name">MikeJohnson</td>
+                      <td data-label="Type:" class="type">
+                        Premium<br />Subscription
+                      </td>
+                      <td data-label="Amount:" class="amount">$75</td>
+                      <td data-label="Date:" class="date">2024-<br />02-20</td>
+                      <td data-label="Status:" class="status">Successful</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Transaction ID:" class="transaction-id">
+                        TX12348
+                      </td>
+                      <td data-label="User:" class="user-name">SarahWilson</td>
+                      <td data-label="Type:" class="type">
+                        Premium<br />Subscription
+                      </td>
+                      <td data-label="Amount:" class="amount">$200</td>
+                      <td data-label="Date:" class="date">2024-<br />02-20</td>
+                      <td data-label="Status:" class="status">Successful</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="dashboard-card">
-                <div class="dashboard-card-header">
-                  <h5>Premium Users</h5>
-                  <div
-                    class="dashboard-card-icon-box dashboard-card-icon-box-2"
-                  >
-                    <img src="imgs/basil_card-outline.png" alt="" />
-                  </div>
-                </div>
-                <div class="dashboard-card-body">
-                  <h2>1,200</h2>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
+            <!-- finance table ends -->
           </div>
         </div>
-        <!-- finance tabel -->
-        <div class="table-container">
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Transaction ID</th>
-                  <th>User</th>
-                  <th>Type</th>
-                  <th>Amount</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-label="Transaction ID:" class="transaction-id">
-                    TX12345
-                  </td>
-                  <td data-label="User:" class="user-name">JohnDoe123</td>
-                  <td data-label="Type:" class="type">
-                    Premium<br />Subscription
-                  </td>
-                  <td data-label="Amount:" class="amount">$100</td>
-                  <td data-label="Date:" class="date">2024-<br />01-15</td>
-                  <td data-label="Status:" class="status">Successful</td>
-                </tr>
-                <tr>
-                  <td data-label="Transaction ID:" class="transaction-id">
-                    TX12346
-                  </td>
-                  <td data-label="User:" class="user-name">JaneSmith_001</td>
-                  <td data-label="Type:" class="type">
-                    Premium<br />Subscription
-                  </td>
-                  <td data-label="Amount:" class="amount">$150</td>
-                  <td data-label="Date:" class="date">2024-<br />02-20</td>
-                  <td data-label="Status:" class="status">Successful</td>
-                </tr>
-                <tr>
-                  <td data-label="Transaction ID:" class="transaction-id">
-                    TX12347
-                  </td>
-                  <td data-label="User:" class="user-name">MikeJohnson</td>
-                  <td data-label="Type:" class="type">
-                    Premium<br />Subscription
-                  </td>
-                  <td data-label="Amount:" class="amount">$75</td>
-                  <td data-label="Date:" class="date">2024-<br />02-20</td>
-                  <td data-label="Status:" class="status">Successful</td>
-                </tr>
-                <tr>
-                  <td data-label="Transaction ID:" class="transaction-id">
-                    TX12348
-                  </td>
-                  <td data-label="User:" class="user-name">SarahWilson</td>
-                  <td data-label="Type:" class="type">
-                    Premium<br />Subscription
-                  </td>
-                  <td data-label="Amount:" class="amount">$200</td>
-                  <td data-label="Date:" class="date">2024-<br />02-20</td>
-                  <td data-label="Status:" class="status">Successful</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <!-- finance table ends -->
       </div>
     </div>
     <!-- usermanagment ends -->
-
     <!-- Bootstrap JS Bundle CDN (optional, for JS components) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

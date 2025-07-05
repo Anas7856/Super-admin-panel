@@ -29,223 +29,272 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- usermanagment cards -->
-    <div class="usermanagment">
-      <div class="dashboard-header">
-        <h1>User Management</h1>
-        <p>Manage and monitor all platform users</p>
+    <div class="main-layout">
+      <!-- sidebar -->
+      <div class="sidebar-toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="row gy-3">
-        <div class="col-12 col-md-3 col-lg-3">
-          <div class="usermanagment-card">
-            <h3>Total Users</h3>
-            <h1>5,000</h1>
-          </div>
+      <!-- sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-logo-box">
+          <img src="imgs/logo.png" alt="" />
         </div>
-        <div class="col-12 col-md-3 col-lg-3">
-          <div class="usermanagment-card">
-            <h3>Premium Users</h3>
-            <h1 class="text-primary">1,200</h1>
-          </div>
+        <div class="menu-items-box">
+          <h3>Main Menu</h3>
+          <ul>
+            <li class="active">
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/dashboardicon.png" alt="" />
+                  <span>Dashboard</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/usermanagment.png" alt="" />
+                  <span>User Management</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="link-box">
+                  <img src="imgs/finacelogo.png" alt="" />
+                  <span>Finance</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="col-12 col-md-3 col-lg-3">
-          <div class="usermanagment-card">
-            <h3>Active Users</h3>
-            <h1 class="text-success">4,750</h1>
-          </div>
-        </div>
-        <div class="col-12 col-md-3 col-lg-3">
-          <div class="usermanagment-card">
-            <h3>Blocked Users</h3>
-            <h1 class="text-danger">250</h1>
-          </div>
+        <div class="sidebar-logout-box">
+          <img src="imgs/logouticon.png" alt="" />
+          <a href="#">Logout</a>
         </div>
       </div>
-      <!-- userlist -->
-      <div class="userlist-container">
-        <h3>User list</h3>
-        <p>Search and filter users by various criteria</p>
-        <div class="tabel-filteration-box">
-          <div class="table-search-input-box">
-            <input
-              type="search"
-              name=""
-              class="search-input"
-              id=""
-              placeholder="Search by username or email"
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="dashboard-main">
+        <div class="usermanagment">
+          <div class="dashboard-header">
+            <h1>User Management</h1>
+            <p>Manage and monitor all platform users</p>
           </div>
-          <div class="tabel-filteration-box2">
-            <select>
-              <option value="">All Types</option>
-              <option value="">Premium</option>
-              <option value="">Free</option>
-            </select>
+          <div class="row gy-3">
+            <div class="col-12 col-md-3 col-lg-3">
+              <div class="usermanagment-card">
+                <h3>Total Users</h3>
+                <h1>5,000</h1>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3">
+              <div class="usermanagment-card">
+                <h3>Premium Users</h3>
+                <h1 class="text-primary">1,200</h1>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3">
+              <div class="usermanagment-card">
+                <h3>Active Users</h3>
+                <h1 class="text-success">4,750</h1>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3">
+              <div class="usermanagment-card">
+                <h3>Blocked Users</h3>
+                <h1 class="text-danger">250</h1>
+              </div>
+            </div>
           </div>
-          <div class="tabel-filteration-box2">
-            <select>
-              <option value="">All Status</option>
-              <option value="">Active</option>
-              <option value="">Blocked</option>
-            </select>
+          <!-- userlist -->
+          <div class="userlist-container">
+            <h3>User list</h3>
+            <p>Search and filter users by various criteria</p>
+            <div class="tabel-filteration-box">
+              <div class="table-search-input-box">
+                <input
+                  type="search"
+                  name=""
+                  class="search-input"
+                  id=""
+                  placeholder="Search by username or email"
+                />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="tabel-filteration-box2">
+                <select>
+                  <option value="">All Types</option>
+                  <option value="">Premium</option>
+                  <option value="">Free</option>
+                </select>
+              </div>
+              <div class="tabel-filteration-box2">
+                <select>
+                  <option value="">All Status</option>
+                  <option value="">Active</option>
+                  <option value="">Blocked</option>
+                </select>
+              </div>
+            </div>
+            <!-- user managment tabel -->
+            <div class="user-table-container">
+              <table class="user-table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Account Type</th>
+                    <th>Posts</th>
+                    <th>Status</th>
+                    <th>Join Date</th>
+                    <th>Last Login</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="user-info">
+                        <div class="user-avatar">JD</div>
+                        <div class="user-details">
+                          <h4>JohnDeo123</h4>
+                          <p>john@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="account-badge premium">Premium</span>
+                    </td>
+                    <td>
+                      <span class="posts-count">150</span>
+                    </td>
+                    <td>
+                      <span class="status-badge active-badge"> Active </span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-01-15</span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-07-01</span>
+                    </td>
+                    <td>
+                      <button class="action-btn">
+                        <div class="block-icon">
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        Block User
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-info">
+                        <div class="user-avatar">JS</div>
+                        <div class="user-details">
+                          <h4>JaneSmith_001</h4>
+                          <p>jane@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="account-badge premium">Premium</span>
+                    </td>
+                    <td>
+                      <span class="posts-count">100</span>
+                    </td>
+                    <td>
+                      <span class="status-badge active-badge"> Active </span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-02-20</span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-06-30</span>
+                    </td>
+                    <td>
+                      <button class="action-btn">
+                        <div class="block-icon">
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        Block User
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-info">
+                        <div class="user-avatar">MJ</div>
+                        <div class="user-details">
+                          <h4>MikeJohnson</h4>
+                          <p>mike@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="account-badge free">Free</span>
+                    </td>
+                    <td>
+                      <span class="posts-count">25</span>
+                    </td>
+                    <td>
+                      <span class="status-badge blocked"> Blocked </span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-02-20</span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-06-30</span>
+                    </td>
+                    <td>
+                      <button class="action-btn">
+                        <div class="block-icon">
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        Block User
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-info">
+                        <div class="user-avatar">SW</div>
+                        <div class="user-details">
+                          <h4>SarahWilson</h4>
+                          <p>sarah@example.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="account-badge free">Free</span>
+                    </td>
+                    <td>
+                      <span class="posts-count">45</span>
+                    </td>
+                    <td>
+                      <span class="status-badge active-badge"> Active </span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-02-20</span>
+                    </td>
+                    <td>
+                      <span class="date-text">2024-06-30</span>
+                    </td>
+                    <td>
+                      <button class="action-btn">
+                        <div class="block-icon">
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        Block User
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- user managment table ends -->
           </div>
         </div>
-        <!-- user managment tabel -->
-        <div class="table-container">
-          <table class="user-table">
-            <thead>
-              <tr>
-                <th>User</th>
-                <th>Account Type</th>
-                <th>Posts</th>
-                <th>Status</th>
-                <th>Join Date</th>
-                <th>Last Login</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">JD</div>
-                    <div class="user-details">
-                      <h4>JohnDeo123</h4>
-                      <p>john@example.com</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <span class="account-badge premium">Premium</span>
-                </td>
-                <td>
-                  <span class="posts-count">150</span>
-                </td>
-                <td>
-                  <span class="status-badge active-badge"> Active </span>
-                </td>
-                <td>
-                  <span class="date-text">2024-01-15</span>
-                </td>
-                <td>
-                  <span class="date-text">2024-07-01</span>
-                </td>
-                <td>
-                  <button class="action-btn">
-                    <div class="block-icon">
-                      <i class="fa-solid fa-xmark"></i>
-                    </div>
-                    Block User
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">JS</div>
-                    <div class="user-details">
-                      <h4>JaneSmith_001</h4>
-                      <p>jane@example.com</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <span class="account-badge premium">Premium</span>
-                </td>
-                <td>
-                  <span class="posts-count">100</span>
-                </td>
-                <td>
-                  <span class="status-badge active-badge"> Active </span>
-                </td>
-                <td>
-                  <span class="date-text">2024-02-20</span>
-                </td>
-                <td>
-                  <span class="date-text">2024-06-30</span>
-                </td>
-                <td>
-                  <button class="action-btn">
-                    <div class="block-icon">
-                      <i class="fa-solid fa-xmark"></i>
-                    </div>
-                    Block User
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">MJ</div>
-                    <div class="user-details">
-                      <h4>MikeJohnson</h4>
-                      <p>mike@example.com</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <span class="account-badge free">Free</span>
-                </td>
-                <td>
-                  <span class="posts-count">25</span>
-                </td>
-                <td>
-                  <span class="status-badge blocked"> Blocked </span>
-                </td>
-                <td>
-                  <span class="date-text">2024-02-20</span>
-                </td>
-                <td>
-                  <span class="date-text">2024-06-30</span>
-                </td>
-                <td>
-                  <button class="action-btn">
-                    <div class="block-icon">
-                      <i class="fa-solid fa-xmark"></i>
-                    </div>
-                    Block User
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="user-info">
-                    <div class="user-avatar">SW</div>
-                    <div class="user-details">
-                      <h4>SarahWilson</h4>
-                      <p>sarah@example.com</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <span class="account-badge free">Free</span>
-                </td>
-                <td>
-                  <span class="posts-count">45</span>
-                </td>
-                <td>
-                  <span class="status-badge active-badge"> Active </span>
-                </td>
-                <td>
-                  <span class="date-text">2024-02-20</span>
-                </td>
-                <td>
-                  <span class="date-text">2024-06-30</span>
-                </td>
-                <td>
-                  <button class="action-btn">
-                    <div class="block-icon">
-                      <i class="fa-solid fa-xmark"></i>
-                    </div>
-                    Block User
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- user managment table ends -->
       </div>
     </div>
     <!-- usermanagment ends -->
@@ -255,5 +304,11 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
